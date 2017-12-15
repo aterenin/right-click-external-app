@@ -1,0 +1,21 @@
+{
+  "name": "right-click-external-app",
+  "main": "./lib/right-click-external-app",
+  "version": "1.0.0",
+  "description": "Right Click -> Open External App",
+  "keywords": [
+    "open in",
+    "external application",
+    "right click",
+    "tree view",
+    "pdf"
+  ],
+  "repository": "https://github.com/aterenin/right-click-external-app",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "shell": "^0.3.2"
+  }
+}
