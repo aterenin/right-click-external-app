@@ -1,4 +1,4 @@
 'context-menu':
   '.tree-view .file': [
-    {'label': 'Open In External App', 'command': 'right-click-external-app:open'}
+    {'label': 'Open in External App', 'command': 'right-click-external-app:open'}
   ]

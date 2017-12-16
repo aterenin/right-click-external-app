@@ -1,8 +1,8 @@
 {
   "name": "right-click-external-app",
   "main": "./lib/right-click-external-app",
-  "version": "1.0.0",
-  "description": "Right Click -> Open External App",
+  "version": "0.0.0",
+  "description": "Adds a right click menu option to open any file in the system's default external app.",
   "keywords": [
     "open in",
     "external application",
