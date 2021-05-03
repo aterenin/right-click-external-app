@@ -1,0 +1,29 @@
+name: apm-publish
+
+on:
+  push:
+    branches:
+      - "!*"
+    tags:
+      - v*
+
+jobs:
+  apm-publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get tag name
+      id: get_tag_name
+      run: echo ::set-output name=TAG_NAME::${GITHUB_REF/refs\/tags\//}
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ steps.get_tag_name.outputs.TAG_NAME }}
+    - uses: atom-community/action-setup-atom@v1
+    - name: Atom version
+      run: atom -v
+    - name: APM version
+      run: apm -v
+    - name: Publish extension
+      run: apm publish -t ${{ steps.get_tag_name.outputs.TAG_NAME }}
+      env:
+        ATOM_ACCESS_TOKEN: ${{ secrets.ATOM_ACCESS_TOKEN }}
